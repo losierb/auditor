@@ -55,10 +55,11 @@ private:
 	QString searchedKeys;
 	QList<QTableWidgetItem *>::iterator i;
 	TableView *tbl;
-	void setMatchedItemsBackground(QColor &color);
+	void setMatchedItemsBackground(QColor color);
+	void closeEvent(QCloseEvent *event);
 private slots:
 	void findNextItemFromTable();
-	void findMatchedItemsFromTable(QString &key);
+	void findMatchedItemsFromTable(const QString &key);
 };
 
 #endif // DIALOGS_H

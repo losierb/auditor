@@ -4,14 +4,32 @@
 <context>
     <name>ChangeItemNumberDialog</name>
     <message>
-        <location filename="dialogs.cpp" line="58"/>
+        <location filename="dialogs.cpp" line="61"/>
         <source>Add</source>
         <translation>进货</translation>
     </message>
     <message>
-        <location filename="dialogs.cpp" line="59"/>
+        <location filename="dialogs.cpp" line="62"/>
         <source>Consume</source>
         <translation>销售</translation>
+    </message>
+</context>
+<context>
+    <name>FindItemsDialog</name>
+    <message>
+        <location filename="dialogs.cpp" line="88"/>
+        <source>Finding items</source>
+        <translation>查找项</translation>
+    </message>
+    <message>
+        <location filename="dialogs.cpp" line="91"/>
+        <source>Find next</source>
+        <translation>查找下一个</translation>
+    </message>
+    <message>
+        <location filename="dialogs.cpp" line="93"/>
+        <source>Key:</source>
+        <translation>关键字:</translation>
     </message>
 </context>
 <context>
@@ -79,63 +97,63 @@
         <translation type="vanished">退出</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="47"/>
+        <location filename="mainwindow.cpp" line="54"/>
         <source>&amp;Quit</source>
         <translation>退出(&amp;Q)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="48"/>
+        <location filename="mainwindow.cpp" line="55"/>
         <source>&amp;Add Item</source>
         <oldsource>Add Item</oldsource>
         <translation>添加项(&amp;A)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="49"/>
+        <location filename="mainwindow.cpp" line="56"/>
         <source>&amp;Undo</source>
         <translation>撤销(&amp;R)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="50"/>
+        <location filename="mainwindow.cpp" line="57"/>
         <source>&amp;Redo</source>
         <translation>重做(&amp;R)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="51"/>
+        <location filename="mainwindow.cpp" line="58"/>
         <source>&amp;Find</source>
         <translation>查找(&amp;F)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="52"/>
+        <location filename="mainwindow.cpp" line="59"/>
         <source>R&amp;efresh</source>
         <translation>刷新(&amp;E)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="53"/>
+        <location filename="mainwindow.cpp" line="60"/>
         <source>A&amp;bout Qt</source>
         <translation>关于Qt(&amp;B)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="54"/>
+        <location filename="mainwindow.cpp" line="61"/>
         <source>&amp;History</source>
         <translation>历史(&amp;H)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="70"/>
+        <location filename="mainwindow.cpp" line="78"/>
         <source>&amp;File</source>
         <translation>文件(&amp;F)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="72"/>
+        <location filename="mainwindow.cpp" line="80"/>
         <source>&amp;Edit</source>
         <translation>编辑(&amp;E)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="78"/>
+        <location filename="mainwindow.cpp" line="86"/>
         <source>&amp;Help</source>
         <translation>帮助(&amp;H)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="84"/>
+        <location filename="mainwindow.cpp" line="92"/>
         <source>Main toolbar</source>
         <translation>主工具栏</translation>
     </message>
@@ -143,17 +161,17 @@
 <context>
     <name>NewItemDialog</name>
     <message>
-        <location filename="dialogs.cpp" line="10"/>
+        <location filename="dialogs.cpp" line="13"/>
         <source>New Item</source>
         <translation>新项</translation>
     </message>
     <message>
-        <location filename="dialogs.cpp" line="18"/>
+        <location filename="dialogs.cpp" line="21"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="dialogs.cpp" line="19"/>
+        <location filename="dialogs.cpp" line="22"/>
         <source>Number</source>
         <translation>库存</translation>
     </message>
@@ -161,12 +179,12 @@
 <context>
     <name>TableView</name>
     <message>
-        <location filename="tableview.cpp" line="66"/>
+        <location filename="tableview.cpp" line="65"/>
         <source>Name</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="tableview.cpp" line="66"/>
+        <location filename="tableview.cpp" line="65"/>
         <source>Number</source>
         <translation>数目</translation>
     </message>

@@ -6,6 +6,7 @@
 #include <QButtonGroup>
 #include <QDebug>
 #include <QList>
+#include <QCloseEvent>
 
 NewItemDialog::NewItemDialog(QWidget *parent): QDialog(parent)
 {
@@ -84,12 +85,13 @@ void ChangeItemNumberDialog::setIfAdd(bool status)
 
 FindItemsDialog::FindItemsDialog(TableView *table, QWidget *parent): QDialog(parent)
 {
+	setWindowTitle(tr("Finding items"));
 	tbl = table;
 	QHBoxLayout *layout = new QHBoxLayout;
 	QPushButton *btn = new QPushButton(tr("Find next"), this);
 	QLineEdit *edit = new QLineEdit;
 	QLabel *label = new QLabel(tr("Key:"), this);
-	connect(edit, &QLineEdit::textChanged, this, &FindItemsDialog::findMatchedItemsFromTable);
+	connect(edit, &QLineEdit::textEdited, this, &FindItemsDialog::findMatchedItemsFromTable);
 	connect(btn, &QPushButton::pressed, this, &FindItemsDialog::findNextItemFromTable);
 	layout->addWidget(label);
 	layout->addWidget(edit);
@@ -97,7 +99,7 @@ FindItemsDialog::FindItemsDialog(TableView *table, QWidget *parent): QDialog(par
 	setLayout(layout);
 }
 
-void FindItemsDialog::setMatchedItemsBackground(QColor &color)
+void FindItemsDialog::setMatchedItemsBackground(QColor color)
 {
 	QList<QTableWidgetItem *>::iterator it;
 	for(it = items.begin(); it != items.end(); ++it) {
@@ -105,8 +107,9 @@ void FindItemsDialog::setMatchedItemsBackground(QColor &color)
 	}
 }
 
-void FindItemsDialog::findMatchedItemsFromTable(QString &key)
+void FindItemsDialog::findMatchedItemsFromTable(const QString &key)
 {
+	qDebug() << "Serching text:" << key;
 	if(key == QString("")) {
 		setMatchedItemsBackground(QColor(Qt::white));
 		items = QList<QTableWidgetItem *>();
@@ -118,15 +121,23 @@ void FindItemsDialog::findMatchedItemsFromTable(QString &key)
 		items = tbl->findItems(key, Qt::MatchContains);
 		i = items.begin();
 		setMatchedItemsBackground(QColor(Qt::yellow));
-		emit scrollToNextMatchedItem(items[0]);
+		if(!items.empty())
+			emit scrollToNextMatchedItem(*i);
 	}
+}
+
+void FindItemsDialog::closeEvent(QCloseEvent *event)
+{
+	setMatchedItemsBackground(QColor(Qt::white));
+	event->accept();
 }
 
 void FindItemsDialog::findNextItemFromTable()
 {
-	i++;
-	if(i == items.end())
-		i = items.begin();
-	emit scrollToNextMatchedItem(*i);
-
+	if(!items.empty()) {
+		i++;
+		if(i == items.end())
+			i = items.begin();
+		emit scrollToNextMatchedItem(*i);
+	}
 }
