@@ -1,11 +1,11 @@
 <RCC>
     <qresource prefix="/images">
-        <file alias="application-exit">images/application-exit.svg</file>
-        <file alias="edit-find">images/edit-find.svg</file>
-        <file alias="edit-redo">images/edit-redo.svg</file>
-        <file alias="edit-undo">images/edit-undo.svg</file>
-        <file alias="list-add">images/list-add.svg</file>
-        <file alias="view-history">images/view-history.svg</file>
-        <file alias="view-refresh">images/view-refresh.svg</file>
+        <file alias="application-exit">images/application-exit.png</file>
+        <file alias="edit-find">images/edit-find.png</file>
+        <file alias="edit-redo">images/edit-redo.png</file>
+        <file alias="edit-undo">images/edit-undo.png</file>
+        <file alias="list-add">images/list-add.png</file>
+        <file alias="view-history">images/view-history.png</file>
+        <file alias="view-refresh">images/view-refresh.png</file>
     </qresource>
 </RCC>

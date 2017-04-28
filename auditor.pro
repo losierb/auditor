@@ -39,9 +39,6 @@ HEADERS += \
         dialogs.h \
         historyviewer.h
 
-#RESOURCES += \
-#        icons.qrc
-
 TRANSLATIONS += auditor.ts
 
 RESOURCES += \
