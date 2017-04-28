@@ -44,13 +44,13 @@ void MainWindow::loadDatabase()
 
 void MainWindow::createActions()
 {
-	quit_action = new QAction(QIcon::fromTheme("application-exit"), tr("&Quit"), this);
-	add_item_action = new QAction(QIcon::fromTheme("list-add"), tr("Add Item"), this);
-	undo_action = new QAction(QIcon::fromTheme("edit-undo"), tr("&Undo"), this);
-	redo_action = new QAction(QIcon::fromTheme("edit-redo"), tr("&Redo"), this);
-	find_action = new QAction(QIcon::fromTheme("edit-find"), tr("&Find"), this);
-	refresh_action = new QAction(QIcon::fromTheme("view-refresh"), tr("R&efresh"), this);
-	show_history_action = new QAction(QIcon::fromTheme("view-history"), tr("&History"), this);
+	quit_action = new QAction(QIcon::fromTheme("application-exit", QIcon("application-exit")), tr("&Quit"), this);
+	add_item_action = new QAction(QIcon::fromTheme("list-add", QIcon("list-add")), tr("Add Item"), this);
+	undo_action = new QAction(QIcon::fromTheme("edit-undo", QIcon("edit-undo")), tr("&Undo"), this);
+	redo_action = new QAction(QIcon::fromTheme("edit-redo", QIcon("edit-redo")), tr("&Redo"), this);
+	find_action = new QAction(QIcon::fromTheme("edit-find", QIcon("edit-find")), tr("&Find"), this);
+	refresh_action = new QAction(QIcon::fromTheme("view-refresh", QIcon("view-refresh")), tr("R&efresh"), this);
+	show_history_action = new QAction(QIcon::fromTheme("view-history", QIcon("view-history")), tr("&History"), this);
 	connect(quit_action, &QAction::triggered, qApp, QApplication::quit);
 	connect(add_item_action, &QAction::triggered, this, &MainWindow::popupAddItemDialog);
 	connect(show_history_action, &QAction::triggered, this, &MainWindow::popupHistoryDialog);

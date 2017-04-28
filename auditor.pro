@@ -43,3 +43,6 @@ HEADERS += \
 #        icons.qrc
 
 TRANSLATIONS += auditor.ts
+
+RESOURCES += \
+    res.qrc
