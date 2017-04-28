@@ -25,6 +25,7 @@ private:
 	void updateFilter();
 private slots:
 	void showThisMonthOnly(int state);
+	void showSummary();
 	void commitTypeToShow(int index);
 	void commitName();
 };

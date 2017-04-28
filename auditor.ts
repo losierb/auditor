@@ -35,59 +35,103 @@
 <context>
     <name>HistoryViewer</name>
     <message>
-        <location filename="historyviewer.cpp" line="21"/>
+        <location filename="historyviewer.cpp" line="25"/>
         <source>History</source>
         <translation>历史记录</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="32"/>
+        <location filename="historyviewer.cpp" line="36"/>
         <source>Time</source>
         <translation>时间</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="33"/>
+        <location filename="historyviewer.cpp" line="37"/>
         <source>Item</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="34"/>
+        <location filename="historyviewer.cpp" line="38"/>
         <source>Changed number</source>
         <translation>进货/销售量</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="35"/>
+        <location filename="historyviewer.cpp" line="39"/>
         <source>Remaining number</source>
         <translation>结余</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="44"/>
+        <location filename="historyviewer.cpp" line="48"/>
         <source>Add only</source>
         <translation>仅进货</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="45"/>
+        <location filename="historyviewer.cpp" line="49"/>
         <source>Consume only</source>
         <translation>仅销售</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="46"/>
+        <location filename="historyviewer.cpp" line="50"/>
         <source>All</source>
         <translation>全部</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="49"/>
+        <location filename="historyviewer.cpp" line="53"/>
         <source>Commit</source>
         <translation>提交</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="52"/>
-        <source>Show this month only</source>
-        <translation>只显示本月的记录</translation>
+        <location filename="historyviewer.cpp" line="55"/>
+        <source>Summary</source>
+        <translation>总计</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="59"/>
+        <location filename="historyviewer.cpp" line="58"/>
+        <source>Within a month only</source>
+        <translation>只显示一个月内</translation>
+    </message>
+    <message>
+        <location filename="historyviewer.cpp" line="121"/>
+        <source>Summary of %1</source>
+        <translation>%1的总计</translation>
+    </message>
+    <message>
+        <location filename="historyviewer.cpp" line="145"/>
+        <source>Summary Within a month</source>
+        <translation>一个月内的总计</translation>
+    </message>
+    <message>
+        <location filename="historyviewer.cpp" line="147"/>
+        <source>Summary of all times</source>
+        <translation>所有时间的总价</translation>
+    </message>
+    <message>
+        <location filename="historyviewer.cpp" line="149"/>
+        <source>Summary of addition: %1</source>
+        <translation>进货总计: %1</translation>
+    </message>
+    <message>
+        <location filename="historyviewer.cpp" line="150"/>
+        <source>Summary of Consumption: %1</source>
+        <translation>销售总计: %1</translation>
+    </message>
+    <message>
+        <location filename="historyviewer.cpp" line="158"/>
+        <source>Invalid Request</source>
+        <translation>无效的请求</translation>
+    </message>
+    <message>
+        <location filename="historyviewer.cpp" line="158"/>
+        <source>You haven&apos;t selected an item yet!</source>
+        <translation>你还没有选择一项物品!</translation>
+    </message>
+    <message>
+        <source>Show this month only</source>
+        <translation type="vanished">只显示本月的记录</translation>
+    </message>
+    <message>
+        <location filename="historyviewer.cpp" line="65"/>
         <source>Name:</source>
-        <translation>名字:</translation>
+        <translation>名称:</translation>
     </message>
 </context>
 <context>
@@ -205,7 +249,7 @@
         <location filename="tableview.cpp" line="26"/>
         <source>&amp;Add/Consume</source>
         <oldsource>&amp;Consume</oldsource>
-        <translation>增加/减少(&amp;A)</translation>
+        <translation>进货/销售(&amp;A)</translation>
     </message>
     <message>
         <location filename="tableview.cpp" line="27"/>

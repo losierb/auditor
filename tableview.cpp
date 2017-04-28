@@ -14,6 +14,7 @@ TableView::TableView(Database *db, QWidget *parent): QTableWidget(parent)
 {
 	_db = db;
 	createContextMenu();
+	setEditTriggers(QTableWidget::NoEditTriggers);
 	setSelectionBehavior(QAbstractItemView::SelectRows);
 	setContextMenuPolicy(Qt::CustomContextMenu);
 	setSelectionMode(QAbstractItemView::SingleSelection);
