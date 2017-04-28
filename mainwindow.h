@@ -28,6 +28,7 @@ private:
 	QAction *find_action;
 	QAction *refresh_action;
 	QAction *show_history_action;
+	QAction *about_qt_action;
 	TableView *table;
 	Database *db;
 	void loadDatabase();

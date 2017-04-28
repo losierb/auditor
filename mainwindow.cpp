@@ -44,17 +44,19 @@ void MainWindow::loadDatabase()
 
 void MainWindow::createActions()
 {
-    quit_action = new QAction(QIcon::fromTheme("application-exit", QIcon(":/images/application-exit")), tr("&Quit"), this);
-    add_item_action = new QAction(QIcon::fromTheme("list-add", QIcon(":/images/list-add")), tr("Add Item"), this);
-    undo_action = new QAction(QIcon::fromTheme("edit-undo", QIcon(":/images/edit-undo")), tr("&Undo"), this);
-    redo_action = new QAction(QIcon::fromTheme("edit-redo", QIcon(":/images/edit-redo")), tr("&Redo"), this);
-    find_action = new QAction(QIcon::fromTheme("edit-find", QIcon(":/images/edit-find")), tr("&Find"), this);
-    refresh_action = new QAction(QIcon::fromTheme("view-refresh", QIcon(":/images/view-refresh")), tr("R&efresh"), this);
-    show_history_action = new QAction(QIcon::fromTheme("view-history", QIcon(":/images/view-history")), tr("&History"), this);
+	quit_action = new QAction(QIcon::fromTheme("application-exit", QIcon(":/images/application-exit")), tr("&Quit"), this);
+	add_item_action = new QAction(QIcon::fromTheme("list-add", QIcon(":/images/list-add")), tr("&Add Item"), this);
+	undo_action = new QAction(QIcon::fromTheme("edit-undo", QIcon(":/images/edit-undo")), tr("&Undo"), this);
+	redo_action = new QAction(QIcon::fromTheme("edit-redo", QIcon(":/images/edit-redo")), tr("&Redo"), this);
+	find_action = new QAction(QIcon::fromTheme("edit-find", QIcon(":/images/edit-find")), tr("&Find"), this);
+	refresh_action = new QAction(QIcon::fromTheme("view-refresh", QIcon(":/images/view-refresh")), tr("R&efresh"), this);
+	about_qt_action = new QAction(tr("A&bout Qt"), this);
+	show_history_action = new QAction(QIcon::fromTheme("view-history", QIcon(":/images/view-history")), tr("&History"), this);
 	connect(quit_action, &QAction::triggered, qApp, QApplication::quit);
 	connect(add_item_action, &QAction::triggered, this, &MainWindow::popupAddItemDialog);
 	connect(show_history_action, &QAction::triggered, this, &MainWindow::popupHistoryDialog);
 	connect(refresh_action, &QAction::triggered, table, &TableView::loadDatabase);
+	connect(about_qt_action, &QAction::triggered, qApp, &QApplication::aboutQt);
 	connect(undo_action, &QAction::triggered, db, &Database::undo);
 	connect(redo_action, &QAction::triggered, db, &Database::redo);
 	undo_action->setDisabled(true);
@@ -73,6 +75,8 @@ void MainWindow::createMenuBar()
 	edit->addAction(find_action);
 	edit->addAction(refresh_action);
 	edit->addAction(show_history_action);
+	QMenu *help = menuBar()->addMenu(tr("&Help"));
+	help->addAction(about_qt_action);
 }
 
 void MainWindow::createToolBar()

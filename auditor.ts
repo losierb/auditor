@@ -70,8 +70,9 @@
     </message>
     <message>
         <location filename="mainwindow.cpp" line="48"/>
-        <source>Add Item</source>
-        <translation>添加项</translation>
+        <source>&amp;Add Item</source>
+        <oldsource>Add Item</oldsource>
+        <translation type="unfinished">添加项</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="49"/>
@@ -95,21 +96,31 @@
     </message>
     <message>
         <location filename="mainwindow.cpp" line="53"/>
+        <source>A&amp;bout Qt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="54"/>
         <source>&amp;History</source>
         <translation>历史(&amp;H)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="68"/>
+        <location filename="mainwindow.cpp" line="70"/>
         <source>&amp;File</source>
         <translation>文件(&amp;F)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="70"/>
+        <location filename="mainwindow.cpp" line="72"/>
         <source>&amp;Edit</source>
         <translation>编辑(&amp;E)</translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="80"/>
+        <location filename="mainwindow.cpp" line="78"/>
+        <source>&amp;Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="84"/>
         <source>Main toolbar</source>
         <translation>主工具栏</translation>
     </message>
