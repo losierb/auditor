@@ -5,6 +5,8 @@
 #include <QDialogButtonBox>
 #include <QLineEdit>
 #include <QSpinBox>
+#include <QTableWidgetItem>
+#include "tableview.h"
 
 class NewItemDialog: public QDialog
 {
@@ -39,6 +41,24 @@ private:
 	QString _name;
 private slots:
 	void setIfAdd(bool status);
+};
+
+class FindItemsDialog: public QDialog
+{
+	Q_OBJECT
+public:
+	FindItemsDialog(TableView *table, QWidget *parent = 0);
+signals:
+	void scrollToNextMatchedItem(const QTableWidgetItem *item, QAbstractItemView::ScrollHint hint = QAbstractItemView::EnsureVisible);
+private:
+	QList<QTableWidgetItem *> items;
+	QString searchedKeys;
+	QList<QTableWidgetItem *>::iterator i;
+	TableView *tbl;
+	void setMatchedItemsBackground(QColor &color);
+private slots:
+	void findNextItemFromTable();
+	void findMatchedItemsFromTable(QString &key);
 };
 
 #endif // DIALOGS_H

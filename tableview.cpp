@@ -33,7 +33,6 @@ void TableView::createContextMenu()
 
 void TableView::showCustomMenu(const QPoint &pos)
 {
-	QTableWidgetItem *item = itemAt(pos);
 	cmenu->popup(this->viewport()->mapToGlobal(pos));
 
 }

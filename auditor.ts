@@ -17,42 +17,57 @@
 <context>
     <name>HistoryViewer</name>
     <message>
-        <location filename="historyviewer.cpp" line="16"/>
+        <location filename="historyviewer.cpp" line="21"/>
         <source>History</source>
         <translation>历史记录</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="27"/>
+        <location filename="historyviewer.cpp" line="32"/>
         <source>Time</source>
         <translation>时间</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="28"/>
+        <location filename="historyviewer.cpp" line="33"/>
         <source>Item</source>
         <translation>名称</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="29"/>
+        <location filename="historyviewer.cpp" line="34"/>
         <source>Changed number</source>
-        <translation>进货/出货量</translation>
+        <translation>进货/销售量</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="30"/>
+        <location filename="historyviewer.cpp" line="35"/>
         <source>Remaining number</source>
         <translation>结余</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="38"/>
+        <location filename="historyviewer.cpp" line="44"/>
+        <source>Add only</source>
+        <translation>仅进货</translation>
+    </message>
+    <message>
+        <location filename="historyviewer.cpp" line="45"/>
+        <source>Consume only</source>
+        <translation>仅销售</translation>
+    </message>
+    <message>
+        <location filename="historyviewer.cpp" line="46"/>
+        <source>All</source>
+        <translation>全部</translation>
+    </message>
+    <message>
+        <location filename="historyviewer.cpp" line="49"/>
         <source>Commit</source>
         <translation>提交</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="41"/>
+        <location filename="historyviewer.cpp" line="52"/>
         <source>Show this month only</source>
         <translation>只显示本月的记录</translation>
     </message>
     <message>
-        <location filename="historyviewer.cpp" line="46"/>
+        <location filename="historyviewer.cpp" line="59"/>
         <source>Name:</source>
         <translation>名字:</translation>
     </message>
@@ -72,7 +87,7 @@
         <location filename="mainwindow.cpp" line="48"/>
         <source>&amp;Add Item</source>
         <oldsource>Add Item</oldsource>
-        <translation type="unfinished">添加项</translation>
+        <translation>添加项(&amp;A)</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="49"/>
@@ -97,7 +112,7 @@
     <message>
         <location filename="mainwindow.cpp" line="53"/>
         <source>A&amp;bout Qt</source>
-        <translation type="unfinished"></translation>
+        <translation>关于Qt(&amp;B)</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="54"/>
@@ -117,7 +132,7 @@
     <message>
         <location filename="mainwindow.cpp" line="78"/>
         <source>&amp;Help</source>
-        <translation type="unfinished"></translation>
+        <translation>帮助(&amp;H)</translation>
     </message>
     <message>
         <location filename="mainwindow.cpp" line="84"/>

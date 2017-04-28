@@ -37,6 +37,13 @@ void MainWindow::popupHistoryDialog()
 	viewer->exec();
 }
 
+void MainWindow::popupFindDialog()
+{
+	FindItemsDialog *dialog = new FindItemsDialog(table, this);
+	connect(dialog, &FindItemsDialog::scrollToNextMatchedItem, table, &TableView::scrollToItem);
+	dialog->exec();
+}
+
 void MainWindow::loadDatabase()
 {
 	table->loadDatabase();
@@ -59,6 +66,7 @@ void MainWindow::createActions()
 	connect(about_qt_action, &QAction::triggered, qApp, &QApplication::aboutQt);
 	connect(undo_action, &QAction::triggered, db, &Database::undo);
 	connect(redo_action, &QAction::triggered, db, &Database::redo);
+	connect(find_action, &QAction::triggered, this, &MainWindow::popupFindDialog);
 	undo_action->setDisabled(true);
 	redo_action->setDisabled(true);
 	connect(db, &Database::canUndoChanged, undo_action, &QAction::setEnabled);

@@ -2,8 +2,10 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QRadioButton>
+#include <QPushButton>
 #include <QButtonGroup>
 #include <QDebug>
+#include <QList>
 
 NewItemDialog::NewItemDialog(QWidget *parent): QDialog(parent)
 {
@@ -78,4 +80,53 @@ void ChangeItemNumberDialog::setIfAdd(bool status)
 {
 	qDebug() << "Status changed to" << status;
 	if_add = status;
+}
+
+FindItemsDialog::FindItemsDialog(TableView *table, QWidget *parent): QDialog(parent)
+{
+	tbl = table;
+	QHBoxLayout *layout = new QHBoxLayout;
+	QPushButton *btn = new QPushButton(tr("Find next"), this);
+	QLineEdit *edit = new QLineEdit;
+	QLabel *label = new QLabel(tr("Key:"), this);
+	connect(edit, &QLineEdit::textChanged, this, &FindItemsDialog::findMatchedItemsFromTable);
+	connect(btn, &QPushButton::pressed, this, &FindItemsDialog::findNextItemFromTable);
+	layout->addWidget(label);
+	layout->addWidget(edit);
+	layout->addWidget(btn);
+	setLayout(layout);
+}
+
+void FindItemsDialog::setMatchedItemsBackground(QColor &color)
+{
+	QList<QTableWidgetItem *>::iterator it;
+	for(it = items.begin(); it != items.end(); ++it) {
+		(*it)->setBackgroundColor(color);
+	}
+}
+
+void FindItemsDialog::findMatchedItemsFromTable(QString &key)
+{
+	if(key == QString("")) {
+		setMatchedItemsBackground(QColor(Qt::white));
+		items = QList<QTableWidgetItem *>();
+		i = items.begin();
+		searchedKeys = key;
+	} else {
+		searchedKeys = key;
+		setMatchedItemsBackground(QColor(Qt::white));
+		items = tbl->findItems(key, Qt::MatchContains);
+		i = items.begin();
+		setMatchedItemsBackground(QColor(Qt::yellow));
+		emit scrollToNextMatchedItem(items[0]);
+	}
+}
+
+void FindItemsDialog::findNextItemFromTable()
+{
+	i++;
+	if(i == items.end())
+		i = items.begin();
+	emit scrollToNextMatchedItem(*i);
+
 }

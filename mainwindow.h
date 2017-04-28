@@ -20,6 +20,7 @@ public:
 public slots:
 	void popupAddItemDialog();
 	void popupHistoryDialog();
+	void popupFindDialog();
 private:
 	QAction *add_item_action;
 	QAction *quit_action;
