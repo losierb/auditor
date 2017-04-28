@@ -158,7 +158,7 @@ void Database::addRecordP(const QDateTime &ts, const QString &name, const int &a
 	int id = queryItemID(name);
 	QSqlQuery query;
 	query.prepare(insert_into_records);
-	query.bindValue(":TIMESTAMP", ts.toString("YYYY-MM-DD HH:mm:ss"));
+    query.bindValue(":TIMESTAMP", ts.toString("yyyy-MM-dd HH:mm:ss"));
 	query.bindValue(":ID", id);
 	query.bindValue(":NUMBER", amount_change);
 	query.bindValue(":AFTER", after);
@@ -169,7 +169,7 @@ void Database::delRecordP(const QDateTime &ts)
 {
 	QSqlQuery query;
 	query.prepare(delete_from_records);
-	query.bindValue(":TIMESTAMP", ts.toString("YYYY-MM-DD HH:mm:ss"));
+    query.bindValue(":TIMESTAMP", ts.toString("yyyy-MM-dd HH:mm:ss"));
 }
 
 int Database::queryItemNumberP(const QString &name)
