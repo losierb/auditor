@@ -67,6 +67,7 @@ void ChangeItemNumberDialog::addWidgets()
 	connect(addbtn, &QRadioButton::toggled, this, &ChangeItemNumberDialog::setIfAdd);
 	addbtn->setChecked(true);
 	spin_box = new QSpinBox(this);
+	spin_box->setMinimum(1); // at lease one item for a valid change.
 	QDialogButtonBox *button_box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
 	connect(button_box, &QDialogButtonBox::accepted, this, &ChangeItemNumberDialog::accept);
 	connect(button_box, &QDialogButtonBox::rejected, this, &ChangeItemNumberDialog::reject);
